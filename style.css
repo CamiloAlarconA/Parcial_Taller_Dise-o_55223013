@@ -1,0 +1,414 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1E293B;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1E293B;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4F46E5;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #E2E8F0;
+}
+
+.btn {
+    display: inline-block;
+    background: #F59E0B;
+    color: #FFFFFF;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #D97706;
+    transform: scale(1.05);
+}
+
+/* Qué hacemos */
+.que-hacemos {
+    padding: 5rem 0;
+    background: #F8FAFC;
+}
+
+.badge {
+    color: #4F46E5;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.que-hacemos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1E293B;
+}
+
+.contenido {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto p {
+    font-size: 1.125rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.estadisticas {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .numero {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #4F46E5;
+}
+
+.stat .label {
+    font-size: 0.875rem;
+    color: #64748B;
+}
+
+.imagen {
+    flex: 1;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Servicios */
+.servicios {
+    padding: 5rem 0;
+    background: #FFFFFF;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1E293B;
+}
+
+.servicios .subtitulo {
+    text-align: center;
+    color: #64748B;
+    margin-bottom: 3rem;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 0.6s ease forwards;
+}
+
+.servicio:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.servicio:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.servicio:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+.icono {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.servicio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1E293B;
+}
+
+.servicio p {
+    color: #64748B;
+    margin-bottom: 1.5rem;
+}
+
+.link {
+    color: #4F46E5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Contacto */
+.contacto {
+    background: linear-gradient(90deg, #1E293B 0%, #0F172A 100%);
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contacto p {
+    font-size: 1.125rem;
+    color: #94A3B8;
+    margin-bottom: 2rem;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-principal {
+    background: #F59E0B;
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.btn-secundario:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #0F172A;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.logo-footer {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.col p {
+    color: #64748B;
+    font-size: 0.875rem;
+}
+
+.sociales a {
+    display: inline-block;
+    color: #64748B;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 0.875rem;
+}
+
+.sociales a:hover {
+    color: #4F46E5;
+}
+
+.col h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.col ul {
+    list-style: none;
+}
+
+.col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.col ul li a {
+    color: #64748B;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.col ul li a:hover {
+    color: #4F46E5;
+}
+
+.creditos {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #1E293B;
+    color: #64748B;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .contenido {
+        flex-direction: column;
+    }
+    
+    .estadisticas {
+        justify-content: center;
+    }
+    
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .servicio {
+        max-width: 350px;
+    }
+    
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
